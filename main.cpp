@@ -35,7 +35,7 @@ int main()
 {
     srand(time(0));	 
 
-	RenderWindow window(VideoMode(320, 480), "The Game!");
+	RenderWindow window(VideoMode(300, 450), "The Game!");
 
     Texture t1,t2,t3;
 	t1.loadFromFile("images/tiles.png");
@@ -114,12 +114,13 @@ int main()
 	{
 		int count=0;
 		for (int j=0;j<N;j++)
-		{
+		{		 
 		    if (field[i][j]) count++;
 		    field[k][j]=field[i][j];
 		}
 		if (count<N) k--;
 	}
+	if(field [2][0]||field[2][1]) window.close();
 
     dx=0; rotate=0; delay=0.3;
 
